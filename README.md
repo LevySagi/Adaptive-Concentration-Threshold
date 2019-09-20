@@ -1,5 +1,4 @@
 # Adaptive-Concentration-Threshold
-# Adaptive-Concentration-Threshold
 
 General information
 
