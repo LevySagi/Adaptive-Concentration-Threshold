@@ -43,9 +43,9 @@ Library 2: AWC(ON) calcium and behavioral responses in animals freely moving in 
     •	Data	   Animal data, organized in (nxm) matrices, with ‘n’ the animal number and ‘m’ is the frame number.
 
 •	Functions List
-1)	  Name: 			          [File, All_Files] = Tracker_NeuronalImagingGradientDevice_v02
-    	External functions:  	(a)	FragmentTracker_SL_ImagingSetup_v09(Fragment), Image processing in a single movie segments.
-                          	(b)	SegmentationSettings = SegmentationSettings_ImagingSetup_v02, Includes behavior segmentation parameters
+1)    Name:                 [File, All_Files] = Tracker_NeuronalImagingGradientDevice_v02
+      External functions:   (a)	FragmentTracker_SL_ImagingSetup_v09(Fragment), Image processing in a single movie segments.
+                            (b)	SegmentationSettings = SegmentationSettings_ImagingSetup_v02, Includes behavior segmentation parameters
     	Description:         	Basic image processing and extraction of animal features 
     	Output:     	        Directory named 'trackfile parts' containing mat files, each file contains image processing of one movie fragment  
 
@@ -56,7 +56,7 @@ Library 2: AWC(ON) calcium and behavioral responses in animals freely moving in 
                           	(b)	'MovieName_StitchedAndManuallyCorrected_Arena1.mat', with all variables, except of 'PatternMatrix' and neuron fluorescence data
                           	(c)	'MovieName_NeuronsDataBeforeManualCorrection_Arena1.mat', with all variables, except of 'PatternMatrix'    
 
-3)	  Name: 			          AnimalAndNeuronTrackerGUI_02(File, BehaviorDataMatrices, SwitchPathDefinitionInTracks)
+3)    Name:                 AnimalAndNeuronTrackerGUI_02(File, BehaviorDataMatrices, SwitchPathDefinitionInTracks)
     	Inputs:              	(a)	BehaviorDataMatrices  = [], The GUI contains an option to check BehaviorDataMatrices from part 4, see inline commentary. 
                           	(b)	SwitchPathDefinitionInTracks = false, Default=false, when the GUI runs on Tracks before behavior segmentation (part 4).  ‘true’ only if the GUI runs on Tracks after behavior segmentation (part 4)
     	External functions:  	Tracks = ExtractNeuralActivityFromTracks_AfterGUI_02(Tracks, File, plotme).
@@ -64,7 +64,7 @@ Library 2: AWC(ON) calcium and behavioral responses in animals freely moving in 
                           	Required part (Save and Exit button): runs the external function: ExtractNeuralActivityFromTracks_AfterGUI_02  
     	Output:     	        This function saves the file:  'MovieName_AfterNeuronPositionManualCorrection.mat'     
 
-4)	  Name: 			          [Tracks, File, TracksStats, Data] = SegmentBehavior_ImagingInGradient_v03 (File, Tracks, TimeOfGradientStartValveSwitch, TimeOfGradientEndValveSwitch)
+4)    Name:                 [Tracks, File, TracksStats, Data] = SegmentBehavior_ImagingInGradient_v03 (File, Tracks, TimeOfGradientStartValveSwitch, TimeOfGradientEndValveSwitch)
     	Inputs:              	'TimeOfGradientStartValveSwitch' and 'TimeOfGradientEndValveSwitch' are the elapsed time in which gradient valves were turned on and off, respectively.
     	External functions:   AnalyzeLocomotionProperties_ImagingSetup_v2.m   >> Locomotion 
                             AnalyzeMorphologyProperties_ImagingSetup_v3.m   >> Morphology 
@@ -77,12 +77,12 @@ Library 2: AWC(ON) calcium and behavioral responses in animals freely moving in 
     	Description:         	Filter and cleanup activity and stimulus data. Define gradient locomotion features. Extract adaptive concentration threshold.
     	Output:               This function saves the file: 'MovieName_DataMatrices_WithGradient.mat' that contains Data structure that stores all data so far
 
-6)	  Name: 			          Data = StitchAndProcessGradientImagingExperiments_v02;
+6)    Name:                 Data = StitchAndProcessGradientImagingExperiments_v02;
     	Inputs:  	            This function loads data of all previous experiments. Experiment names and paths are defined in the function first rows. It also loads ‘ManualInspection_GradientLocomotion.mat’ with data from manual inspection of gradient locomotion patterns for single frame resolution.  
     	Description:         	Concatenate data from all experiments. Additional processing, including analysis of gradient conditions, navigation decisions and behavior code simplification.  
     	Output:     	        This function saves the file 'GradientImagingMetaAnalysis.mat' that contains raw and processed data from all experiments
     
-7)	  Name:                 PlotsAndStats_Figs_3_4(Data) 
+7)    Name:                 PlotsAndStats_Figs_3_4(Data) 
     	Inputs:               ‘Data’ structure from previous section, stored in ‘GradientImagingMetaAnalysis.mat’, and colormap for behavior matrices stored at ‘ColormapLowLevelBehavior.mat’    
     	Description:          Sort data, plot and calculate statistics related to all panels in figure 3 and 4A-C.
 
