@@ -2,7 +2,7 @@
 
 General information
 
-•	This repository codes used for data analysis, plots and statistics in the manuscript: “An adaptive-threshold mechanism for odor sensation and animal navigation” by Sagi Levy and Cori Bargmann which was published at Neuron. This manuscript should be cited for any use of the attached code or data. 
+•	This repository codes used for data analysis, plots and statistics in the manuscript: “An adaptive-threshold mechanism for odor sensation and animal navigation” by Sagi Levy and Cori Bargmann which was published in Neuron. This manuscript should be cited for any use of the attached code or data. 
 •	All codes are written in Matlab (MathWorks) and detailed commentary and instructions are available within each function. Codes are arranged in five libraries as discussed below. 
 •	Raw Data repository: most raw data are stored in small-size ‘.mat’ files and are available in this repository. All data, including large-size raw and processed data, can be downloaded from Mendeley Data, http://dx.doi.org/10.17632/bgvk49bjcx.1 
 •	Input raw mat files are loaded within the functions. Please make sure that files are present in the relevant directory or Matlab path. Alternatively, please update correct file paths within the functions.
